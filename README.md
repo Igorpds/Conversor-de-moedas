@@ -1,2 +1,2 @@
 # Conversos-de-moedas
- Segundo projeto ofertado pelo programa ONE - Alura
+ Segundo projeto proposto pelo programa ONE - Oracle Next Education
