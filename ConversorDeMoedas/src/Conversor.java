@@ -3,14 +3,35 @@ import javax.swing.JOptionPane;
 public class Conversor {
 
 	public static void main(String[] args) {
-		Object [] itens = {"Conversor de moedas", "Conversor de temperatura"};
-		Object selectValue = JOptionPane.showInputDialog(null, "Escolha uma opção: ", "Menu", JOptionPane.INFORMATION_MESSAGE, null, itens, itens[0]);
-		JOptionPane.showInputDialog(null, "Insira um valor: ");
+	
+	String opcoes[] = {"Conversor de moedas", "Conversor de temperatura"};
+	
+	int escolha = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Conversor",
+			JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, opcoes,opcoes[0]);
+	
+	if(escolha == 0) {
+		String moedas[] = {"Converter de Reais a Dólar", "real euro", "real libra esterlinas",
+				"real peso argentino", "real peso chileno","dolar a real",
+				"euro a real","libras esterlinas a real",
+				"peso argentino a real", "peso chileno a real"};
+	
+		String escolhaMoeda =(String) JOptionPane.showInputDialog(null, "Escolha a conversão: ", "moedas",
+				JOptionPane.PLAIN_MESSAGE, null, moedas, moedas[0]);
 		
-		Object[] moedas = {"De reais a Dolares", "De reais a euros", "de reais a libras", "de reais a yenes", "de reais a won coreano", "de dolares a reais"," de euro a reais", "de libras a reais"};
-	Object selectValue1 = JOptionPane.showInputDialog(null, "Escolha uma opção: ", "Moedas", JOptionPane.INFORMATION_MESSAGE,null, moedas, moedas[0]);
-	JOptionPane.showMessageDialog(null," O valor convertido é de:","Message", JOptionPane.OK_OPTION, null);
-	
-	
+		double valor = Double.parseDouble(JOptionPane.showInputDialog(null,
+				"Digite o valor a ser convertido"));
+		
+		double resultado = 0.0;
+		
+		switch(escolhaMoeda) {
+		case "Converter de Reais a Dólar":
+			resultado = valor / 5.16;
+			JOptionPane.showMessageDialog(null, resultado);
+			
+		}
+		
+		
 	}
+	
+	}		        
 }
