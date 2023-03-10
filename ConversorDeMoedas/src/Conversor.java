@@ -141,11 +141,18 @@ public class Conversor {
 				}
 
 			}
-			int resposta = JOptionPane.showConfirmDialog(null,"Deseja realizar outra conversão?","Conversor", JOptionPane.YES_NO_OPTION);
+			int resposta = JOptionPane.showConfirmDialog(null,"Deseja realizar outra conversão?","Conversor", JOptionPane.YES_NO_CANCEL_OPTION);
 			
-			if(resposta == JOptionPane.NO_OPTION) {
-				continuar = false;
+			if(resposta == JOptionPane.YES_OPTION) {
+				continuar = true;
 				
+			}else if (resposta == JOptionPane.NO_OPTION) {
+				JOptionPane.showMessageDialog(null, "Programa finalizado");
+				continuar = false;
+			
+			}else {
+				JOptionPane.showMessageDialog(null, "Programa concluído");
+				continuar = false;
 			}
 		}
 		
