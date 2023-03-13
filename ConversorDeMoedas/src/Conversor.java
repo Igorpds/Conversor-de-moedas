@@ -107,32 +107,32 @@ public class Conversor {
 				
 				case "Celsius para Fahrenheit":
 					resultado = (valor * 1.8) + 32;
-					JOptionPane.showMessageDialog(null,  "A temperatura convertida é : " + String.format("%.2f", resultado , " °F"));
+					JOptionPane.showMessageDialog(null,  "A temperatura convertida é : " + String.format("%.2f", resultado) + " °F");
 					break;
 					
 				case "Celsius para Kelvin":
-					resultado = valor + 273;
-					JOptionPane.showMessageDialog(null,  "A temperatura convertida é : " + String.format("%.2f", resultado, " k"));
+					resultado = valor + 273.15;
+					JOptionPane.showMessageDialog(null,  "A temperatura convertida é : " + String.format("%.2f", resultado) + " K");
 					break;
 					
 				case "Fahrenheit para Celsius":
 					resultado = (valor - 32) / 1.8;
-					JOptionPane.showMessageDialog(null,  "A temperatura convertida é : " + String.format("%.2f", resultado," ºC"));
+					JOptionPane.showMessageDialog(null,  "A temperatura convertida é : " + String.format("%.2f", resultado) + " ºC");
 					break;
 					
 				case "Fahrenheit para Kelvin":
 					resultado = (valor - 32)* 5 / 9 + 273.15;
-					JOptionPane.showMessageDialog(null,  "A temperatura convertida é : " + String.format("%.2f", resultado, " K"));
+					JOptionPane.showMessageDialog(null,  "A temperatura convertida é : " + String.format("%.2f", resultado) + " K");
 					break;
 					
 				case "Kelvin para Celsius":
 					resultado = valor - 273.15;
-					JOptionPane.showMessageDialog(null,  "A temperatura convertida é : " + String.format("%.2f", resultado, " ºC"));
+					JOptionPane.showMessageDialog(null,  "A temperatura convertida é : " + String.format("%.2f", resultado) + " ºC");
 					break;
 					
 				case "Kelvin para Fahrenheit":
 					resultado = (valor - 273.15) * 9 / 5 + 32;
-					JOptionPane.showMessageDialog(null,  "A temperatura convertida é : " + String.format("%.2f", resultado, " ºF"));
+					JOptionPane.showMessageDialog(null,  "A temperatura convertida é : " + String.format("%.2f", resultado) + " ºF");
 					break;
 					
 				default:
